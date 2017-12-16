@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.dev.model.Goal;
+import com.dev.model.GoalReport;
 import com.dev.repository.GoalRepository;
 
 @Service("goalService")
@@ -20,6 +21,10 @@ public class GoalServiceImpl implements GoalService {
 
 	public List<Goal> findAllGoals() {
 		return goalRepository.loadAll();
+	}
+
+	public List<GoalReport> findAllGoalReports() {
+		return goalRepository.findAllGoalReports();
 	}
 
 }
